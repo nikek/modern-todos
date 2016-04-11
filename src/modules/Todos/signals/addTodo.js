@@ -1,29 +1,20 @@
-function startLoading({state}) {
-  state.set('todos.loading', true)
-}
+import set from 'cerebral-addons/set'
+import copy from 'cerebral-addons/copy'
+import push from 'cerebral-addons/push'
 
-function stopLoading({state}) {
-  state.set('todos.loading', false)
-}
-
-function setupNewTodo({input, state, output}) {
+const setupNewTodo = ({input, state, output}) => {
   setTimeout(function() {
-    let newTodoTitle = state.get('todos.newTodoTitle')
-    let newTodo = {title: newTodoTitle, done: false}
-
-    output.success({newTodo})
+    output.success({
+      title: input.title,
+      done: false
+    })
   }, 1000)
 }
 
-function addTodo({state, input}) {
-  state.push('todos.list', input.newTodo)
-  state.set('todos.newTodoTitle', '')
-}
-
 export default [
-  startLoading,
+  set('state://todos/loading', true),
   [setupNewTodo, {
-    success: [addTodo]
+    success: [copy('input:/', push('state://todos/list'))]
   }],
-  stopLoading
+  set('state://todos/loading', false)
 ]

@@ -6,9 +6,7 @@ import {signals, state} from '../app.js'
   </ul>
 
   <script>
-    this.on('update', () => {
-      this.list = state.get('todos', 'list')
-    })
+    this.on('update', () => { this.list = state.get('todos', 'list') })
     state.on('update', this.update)
 
     this.toggle = (e) => {

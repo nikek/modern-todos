@@ -1,7 +1,6 @@
 function toggleDone({input, state}) {
-  let i = state.get('todos.list').indexOf(input.todo);
-  let bla = state.select('todos','list', i).get();
-  console.log(bla)
+  const index = state.get('todos.list').indexOf(input.todo);
+  state.select(['todos','list', index]).set('done', !input.todo.done);
 }
 
 export default [
