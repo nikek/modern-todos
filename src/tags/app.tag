@@ -24,10 +24,4 @@ import './todos-list.tag'
       this.input.value = ''
     }
   </script>
-
-  <style media="screen">
-    .done {
-      text-decoration: line-through;
-    }
-  </style>
 </app>

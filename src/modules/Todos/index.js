@@ -1,4 +1,5 @@
 import addTodo from './signals/addTodo';
+import removeTodo from './signals/removeTodo';
 import toggleDone from './signals/toggleDone';
 
 export default (options = {}) => {
@@ -12,6 +13,7 @@ export default (options = {}) => {
 
     module.addSignals({
       addTodo,
+      removeTodo,
       toggleDone
     });
 

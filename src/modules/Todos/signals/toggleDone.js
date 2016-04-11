@@ -3,6 +3,4 @@ function toggleDone({input, state}) {
   todo.set('done', !todo.get('done'));
 }
 
-export default [
-  toggleDone
-]
+export default [toggleDone]

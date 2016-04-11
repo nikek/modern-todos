@@ -1,8 +1,22 @@
 html {
   font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+  color: #444;
 }
 
 // Removing 300ms tap delay on the following elements
 a, button, input, select, textarea, label, summary {
   touch-action: manipulation;
 }
+
+button {
+  border: 1px solid #ccc;
+  background-color: #f6f6f6;
+  border-radius: 1em;
+  padding: 2px 6px 4px;
+
+  &:hover { background-color: #e8e8e8; }
+}
+
+input[type=checkbox], button { position: relative; top: -1px;}
+
+input[type=text] { border-radius: 1px; border: 1px solid #ccc; line-height: 1.4em;}
