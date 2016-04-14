@@ -3,6 +3,5 @@ import './style.less'
 
 import riot from 'riot'
 import './tags/app.tag'
-import './tags/title.tag'
 
-riot.mount('*')
+riot.mount('app')
