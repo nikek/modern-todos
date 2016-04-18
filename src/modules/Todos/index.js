@@ -1,5 +1,6 @@
 import addTodo from './signals/addTodo';
 import removeTodo from './signals/removeTodo';
+import setFilter from './signals/setFilter';
 import toggleDone from './signals/toggleDone';
 
 export default (options = {}) => {
@@ -7,13 +8,14 @@ export default (options = {}) => {
 
     module.addState({
       title: 'My Todos',
-      newTodoTitle: '',
+      filter: 'all',
       list: [{title:'My first todo', done:false}, {title:'The second one', done:true}]
     });
 
     module.addSignals({
       addTodo,
       removeTodo,
+      setFilter,
       toggleDone
     });
 

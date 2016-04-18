@@ -13,11 +13,11 @@ import './todos-list.tag'
   <script>
     this.signals = signals;
 
-    this.on('mount', () => { this.title = state.get('todos', 'title') })
+    this.on('before-mount', () => { this.title = state.get('todos','title'); this.update(); })
     this.on('update', () => {
-      this.loading = state.get('todos', 'loading')
+      this.loading = state.get('todos','loading')
     })
-    state.on('update', this.update)
+    state.on('change', this.update)
 
     this.add = () => {
       signals.todos.addTodo({ title: this.input.value })

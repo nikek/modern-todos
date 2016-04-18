@@ -11,5 +11,5 @@ controller.addModules({
   devtools: Devtools()
 })
 
-export const state = model.tree
+export const state = controller
 export const signals = controller.getSignals()
