@@ -6,16 +6,16 @@
   </form>
 
   <script>
+    this.connectCerebral(
+      { loading: ['todos', 'loading'] },
+      { addTodo: ['todos', 'addTodo'] }
+    )
+
     this.add = () => {
       if (!this.input.value) return
 
       this.addTodo({ title: this.input.value })
       this.input.value = ''
     }
-
-    this.connectCerebral(
-      { loading: ['todos', 'loading'] },
-      { addTodo: ['todos', 'addTodo'] }
-    )
   </script>
 </todo-adder>

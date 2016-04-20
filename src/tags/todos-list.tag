@@ -15,13 +15,13 @@ import visibleTodos from '../modules/Todos/computed/visibleTodos.js'
   <button type="button" name="notDone" onclick={setFilter}>Not done</button>
 
   <script>
-    this.toggle = (e) => this.todos.toggleDone({todo: e.item.todo})
-    this.remove = (e) => this.todos.removeTodo({todo: e.item.todo})
-    this.setFilter = (e) => this.todos.setFilter({filter: e.target.name})
-
     this.connectCerebral(
       { list: visibleTodos },
       { todos: ['todos'] }
     )
+
+    this.toggle = (e) => this.todos.toggleDone({todo: e.item.todo})
+    this.remove = (e) => this.todos.removeTodo({todo: e.item.todo})
+    this.setFilter = (e) => this.todos.setFilter({filter: e.target.name})
   </script>
 </todos-list>
