@@ -6,5 +6,5 @@ export default function (get) {
     return (filter === 'all' ||
            (filter === 'done' && todo.done) ||
            (filter === 'notDone' && !todo.done))
-  });
-};
+  })
+}

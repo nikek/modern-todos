@@ -15,21 +15,36 @@ button {
   padding: 2px 6px 4px;
 
   &:hover { background-color: #e8e8e8; }
+
+  &.remove:hover {
+    background-color: #f8d8d8;
+    border-color: #dbb;
+  }
 }
 
-input[type=checkbox], button { position: relative; top: -1px;}
+input[type=checkbox],
+button {
+  position: relative;
+  top: -1px;
+}
 
-input[type=text] { border-radius: 1px; border: 1px solid #ccc; line-height: 1.4em;}
+input[type=text] {
+  border-radius: 1px;
+  border: 1px solid #ccc;
+  line-height: 1.4em;
+}
 
 ul {
   list-style: none;
   padding-left: 10px;
 }
-li + li { margin-top: .25em;}
-label { display: inline-block; padding: 0 6px 0 1px; border-radius: 2px;}
-label:hover { background-color: rgba(200,220,255,0.5) }
-.done { text-decoration: line-through; }
-button.remove:hover {
-  background-color: #f8d8d8;
-  border-color: #dbb;
+li + li { margin-top: .25em; }
+
+label {
+  display: inline-block;
+  padding: 0 6px 0 1px;
+  border-radius: 2px;
+
+  &:hover { background-color: rgba(200,220,255,0.5) }
+  &.done { text-decoration: line-through; }
 }

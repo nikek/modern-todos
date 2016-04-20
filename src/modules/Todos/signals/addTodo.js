@@ -2,7 +2,7 @@ import set from 'cerebral-addons/set'
 import copy from 'cerebral-addons/copy'
 import push from 'cerebral-addons/push'
 
-const setupNewTodo = ({input, state, output}) => {
+const setupNewTodo = ({input, output}) => {
   setTimeout(function() {
     output.success({
       title: input.title,
