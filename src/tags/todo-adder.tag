@@ -13,7 +13,7 @@
       this.input.value = ''
     }
 
-    this.connectCerebral(this,
+    this.connectCerebral(
       { loading: ['todos', 'loading'] },
       { addTodo: ['todos', 'addTodo'] }
     )

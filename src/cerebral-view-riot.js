@@ -1,10 +1,7 @@
 export default function(controller) {
   return {
-    connectCerebral: (tag, statePaths, signalPaths, controllerName) => {
-      // Get the whole controller
-      if(controllerName) {
-        tag[controllerName] = controller
-      }
+    connectCerebral: function (statePaths, signalPaths) {
+      const tag = this
 
       // Attach signals to tag
       if(signalPaths) {
