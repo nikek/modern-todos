@@ -1,8 +1,10 @@
-import './todos-list.tag'
 import './todo-adder.tag'
+import './todos-filter.tag'
+import './todos-list.tag'
 
 <app>
   <h1>Todos</h1>
-  <todos-list></todos-list>
   <todo-adder></todo-adder>
+  <todos-filter></todos-filter>
+  <todos-list></todos-list>
 </app>

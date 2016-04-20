@@ -2,7 +2,7 @@
   <form onsubmit={add}>
     <input type="text" name="input">
     <button type="submit" disabled={loading}>Add</button>
-    <span if={loading}>loading</span>
+    <div show={loading}>loading</div>
   </form>
 
   <script>

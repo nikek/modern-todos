@@ -1,6 +1,6 @@
 import set from 'cerebral-addons/set'
 import copy from 'cerebral-addons/copy'
-import push from 'cerebral-addons/push'
+import unshift from 'cerebral-addons/unshift'
 
 const setupNewTodo = ({input, output}) => {
   setTimeout(function() {
@@ -14,7 +14,7 @@ const setupNewTodo = ({input, output}) => {
 export default [
   set('state://todos/loading', true),
   [setupNewTodo, {
-    success: [copy('input:/', push('state://todos/list'))]
+    success: [copy('input:/', unshift('state://todos/list'))]
   }],
   set('state://todos/loading', false)
 ]
