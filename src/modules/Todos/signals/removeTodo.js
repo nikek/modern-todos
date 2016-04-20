@@ -1,5 +1,6 @@
 function removeTodo({input, state}) {
-  state.unset(`todos.list.${input.index}`)
+  const index = state.select('todos.list').get().indexOf(input.todo)
+  state.unset(`todos.list.${index}`)
 }
 
 export default [removeTodo]
